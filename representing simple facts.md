@@ -79,7 +79,7 @@ _:PersonWorksForCompany a sh:NodeShape;
 .
 ```
 
-This is not a very satisfying conclusion, as this shape doesn't target our original triple, but only the reification of this triple as an rdf:Statement. It does however makes it easy to extend this to complex fact types and also the inclusion of roles.
+This is not a very satisfying conclusion, as this shape doesn't target our original triple, but only the reification of this triple as an `rdf:Statement`. It does however makes it easy to extend this to complex fact types and also the inclusion of roles.
 
 ## Roles and fact types
 
@@ -122,6 +122,7 @@ But how can we solve the problem of specifying the original triple? The "solutio
 
 Although fact based modeling doesn't have explicit attribution, the special case of simple facts have attribution: the simple fact states a fact *about* the subject. We can attribute the simple fact to the subject, so we might state:
 
+```
 _:PersonWorksForCompanyAttribution a sh:NodeShape;
   sh:targetClass _:Person;
   sh:property [
@@ -129,6 +130,7 @@ _:PersonWorksForCompanyAttribution a sh:NodeShape;
     sh:class _:Company
   ]
 .
+```
 
 ## Terminology and Fact types
 
