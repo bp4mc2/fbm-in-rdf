@@ -4,7 +4,7 @@ Fact Based Modeling is a type of conceptual modelling using fact types as the pr
 
 In the paper [Towards Key Principes of Fact Based Thinking Methods and Protocols](https://www.researchgate.net/publication/330922696_Towards_Key_Principles_of_Fact_Based_Thinking_Methods_and_Protocols), Stijn Hoppenbrouwers, Erik Proper and Maurice Nijssen go a step further and imply that, although Fact Based Modelling hasn't become mainstream, many conceptual modellers follow (most of) the principes of Fact Based Thinking.
 
-Semantic modeling, using the RDF web standards like RDFS, OWL, SKOS and SHACL, is a type of conceptual modelling that has become mainstream, as it is take up by all the major players in the web community, like Google, Microsoft, Facebook and Amazon. IT research companies like Gartner and Forrester have predicted the need for semantically rich data structures like knowledge graphs and the need for semantically augmented data catalogs. Many governmental and commercial organizations are investigating how they can incorporate semantic modelling in their Data Management strategies.
+Semantic modeling, using the RDF web standards like RDFS, OWL, SKOS and SHACL, is a type of conceptual modelling that has become mainstream, as it is taken up by all the major players in the web community, like Google, Microsoft, Facebook and Amazon. IT research companies like Gartner and Forrester have predicted the need for semantically rich data structures like knowledge graphs and the need for semantically augmented data catalogs. Many governmental and commercial organizations are investigating how they can incorporate semantic modelling in their Data Management strategies.
 
 Creating a semantic model is not that hard. But creating a good semantic model is not an easy task. This research repository investigates how a Fact Based Thinking approach might help to create good semantic models. And at the same time, we will create a formal language for fact based modelling, using *only* the available RDF web standards. In this way, we might pave the road for a mainstream adoption of (at least) Fact Based Thinking.
 
@@ -22,6 +22,13 @@ In the paper mentioned in the introduction, ten principes of Fact Base Thinking 
 8. *Modelling language and procedure are two sides of the same coin*. This principe is one of the main reasons for this research repository: the semantic modelling community lacks a rigor procedure for semantic modelling.
 9. *Term definitions are an integral part of models*.  This principe can be linked to vocabulary-principe of both SKOS and OWL standards.
 10. *Variation between specific situations of use*. As semantic modelling is used all over the web, it is clear that this principe holds true for semantic models. However, that does not imply that a single language and metamodel cannot exists. It's all a matter of communication and creating a global (web) community that can adhere to the language presented. A language that is already available as the combination of different semantic standards.
+
+## Research goals
+
+This research repository will give answers to the following questions:
+
+1. How can we represent facts in RDF?
+2. How can we represent fact types in RDF?
 
 ## Structure of this repository
 
