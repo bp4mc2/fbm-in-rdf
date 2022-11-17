@@ -29,6 +29,7 @@ This research repository will give answers to the following questions:
 
 1. How can we represent facts in RDF?
 2. How can we represent fact types in RDF?
+3. How can we verbalize facts in RDF (the communication of the facts themselves)?
 
 ## Structure of this repository
 
