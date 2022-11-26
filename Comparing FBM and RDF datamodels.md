@@ -26,13 +26,25 @@ FBM, especially FCO-IM, is designed to work for people. It's intention is to be 
 In FBM data is a compact way tot write down the relevant declarative sentences. Starting point are the **human readable and understandable** declarative sentences. How the actual data is stored is of no concern to FBM.
 (In the rest of this article we use FCO-IM as a representative of FBM. Mostly because the specifications of that method are free available [here](https://www.fco-im.nl/pdfFiles/FCO-IM%20book.pdf)
 
-FCO-IM is a method that leads to a formal grammar which can be used to produce formal sentences. Every possible relevant declarative sentence in the domain has at least on look-a-like formal sentence. Furthermore the formal sentences with the same meaning are linked. 
-For instance. So if we assume that 'John is married to Ann', 'Ann is married to John' and 'John and Ann are married' have the same meaning then these sentences are linked together. 
+FCO-IM is a method that leads to a formal grammar that can be used to produce formal sentences. Every possible relevant declarative sentence in the domain has at least on look-a-like formal sentence. Furthermore the formal sentences with the same meaning are linked. 
+For instance. So if we assume that 'John is married to Ann', 'Ann is married to John' and 'John and Ann are married' have the same meaning then these sentences are linked together by saying that they represent the same fact. 
+
 If you want to refer to something FCO-IM uses the common technic used for that in natural languages: names of referring expression 
 A `referring expression` is any expression used in an utterance to refer to something or someone (or a clearly delimited collection of things or people), i.e. used with a particular referent in mind.
-(from: Semantics  a Coursebook) 
+(from: Semantics a Coursebook). FCOIM assumes that changing the referring expressions in a declarative sentence has no effect on the meaning of that sentence. (Which is true, most cases). Furthermore the Sense of a ds is supposed to be the same if the referees are not known. So the sense of the ds 'a person is married to a person' is supposed to be 'known'. 
+For Dss with the same syntactic structure there are production rules containing Non-Terminals in the places where a referring expression is expected. 
+A Fact Type can be seen as a production rule in an abstract synax. 
+the rule contains a 'Predicate' and 1 or more 'Roles' A Role for every NT in the concrete syntax. 
 
-A proposition is the meaning of a declarative sentence.
+There are special Fact Types that state the existence of an object of a implied certain Object Type, so called existence postulating fact expressions. 
+they state the existence of an identifiable thing. e.g. 'there is a person called John'. 
+Notice that 'John is married to Ann' implies 'there is a person called John'. 
 
+toDo:
+- waar komt de IRI erbij?
+- een Fact Type omvat/bestaat uit of In een Fact Type herken je de betrokken object typen én het predicaat. in de betekenis van het predicaat zijn de rollen opgenomen. trouwen depends on persoon.
+- hoe wordt omgegaan met twee naam/code stelsels voor t zelfde objecttype? 
+('het land met ISO2 code <ISO2landcode> is dezelfde als <landnaam>' ?? )
+- A proposition is the meaning of a declarative sentence. Fact = Proposition ??
 
  
