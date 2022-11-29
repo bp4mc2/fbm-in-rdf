@@ -47,7 +47,7 @@ Notice that 'John is married to Ann' implies 'there is a person called John'.
 ----
 Because an abstract syntax describes a graph the mapping of FCO-IM cannot be that complex. A first guess.
 
-`
+```
 \# level 1
 
 _:FactType rdfs:subClassOf owl:Class.
@@ -65,7 +65,7 @@ _:wife    a _:Role ; rdfs:label "Wife";    rdfs:range _:Person.
 
 _:abc a _:Fact , _:Marriage ;  _:husband _:John ;   _:wife _:Ann ;.
 
-`
+```
 
 toDo:
 - waar komt de IRI erbij?
