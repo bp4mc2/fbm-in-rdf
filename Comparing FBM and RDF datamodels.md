@@ -75,7 +75,7 @@ fcoim:fte  a owl:ObjectProperty .
 fcoim:role  a owl:ObjectProperty .
 fcoim:expression a owl:ObjectProperty .
 
-\# level 2
+\# level 2 - domain vocabular
 
 ## Student
 ex-ont:Student a fcoim:FactType , fcoim:ObjectType ;
@@ -127,9 +127,12 @@ ex-ont:roleMentorship2 a fcoim:Role ;
 
 ex-concept:Mentorship a skos:Concept ;
    skos:definition "a Teacher is the mentor of a Student if the Student has requested mentorship from the Teacher and the Teacher has accepted the request."@en . 
-   ## definitions should be objectively verifiable .  
+   ## definitions should be objectively verifiable (in the domain that is communicated about) .  
+   
+ex-data-rule:Mentorship a sh:Rule ; 
+  ## een regel om de logische triples af te leiden uit de data opslag (en die kan zowel in triples, tuples of records zitten. ##
 
-\#level 3 - facts 
+\#level 3 - facts - logical level - on this level inferencing is applied
 
 ex:y a ex-ont:Mentorship ;
    rdfs:label "the mentor of student Peter Johnson is BLC" ;
@@ -145,6 +148,17 @@ ex:z a ex-ont:Teacher ;
    ex-ont:roleTeacherCode "BLC" ;
    rdfs:label "BLC" ;
    .
+
+\#level 4 - data - storage level - the data is interpreted to get the facts of level 3
+
+ex:x a ex-ont:Student ;
+   ex-ont:firstname  "Peter" ;
+   ex-ont:surname "Johnson";
+   ex-ont:mentor ex:z .
+ex:z a ex-ont:Teacher ;
+   ex-ont:code "BLC" ;
+   .
+
 
 ```
 Visual
