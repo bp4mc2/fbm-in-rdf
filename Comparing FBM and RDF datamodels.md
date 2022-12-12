@@ -126,11 +126,31 @@ ex-ont:roleMentorship2 a fcoim:Role ;
 .
 
 ex-concept:Mentorship a skos:Concept ;
-   skos:definition "a Teacher is the mentor of a Student if the Student has requested mentorship from the Teacher and the Teacher has accepted the request."@en . 
+   skos:definition """a Teacher is the mentor of a Student if the Student has 
+   requested mentorship from the Teacher and the Teacher has accepted the request."""@en . 
    ## definitions should be objectively verifiable (in the domain that is communicated about) .  
    
-ex-data-rule:Mentorship a sh:Rule ; 
-  ## een regel om de logische triples af te leiden uit de data opslag (en die kan zowel in triples, tuples of records zitten. ##
+ex-data-rule:Mentorship a sh:SPARQLRule ; 
+  ## een regel om de logische triples af te leiden uit de data opslag 
+  ## (en die kan zowel in triples, tuples of records zitten. ##
+  sh:construct """
+  CONSTRUCT { #hoe maak je een uri???# 
+      ?mentorship a ex-ont:Mentorship ;
+                  rdfs:label #de regel mbv de expression het label af te leiden # ;
+                  ex-ont:roleMentorship1 ?student ;
+                  ex-ont:roleMentorship2 ?teacher ;
+                  . }
+   WHERE {
+       ?student a ex-ont:Student ;
+                ex-ont:firstname  ?firstname  ;
+                ex-ont:surname ?surname ;
+                ex-ont:mentor ?teacher  ;
+                .
+       ?teacher a ex-ont:Teacher ;
+                ex-ont:code ?teacherCode  ;
+                .
+          }
+   """" ; .
 
 \#level 3 - facts - logical level - on this level inferencing is applied
 
